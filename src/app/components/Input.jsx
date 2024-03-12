@@ -24,9 +24,6 @@ const Input = () => {
       ...prevState,
       [name]: value,
     }));
-
-    // Asigna isAutoFilled a true si el input ha sido llenado
-    if (value) setIsAutoFilled(true);
   };
 
   /* submit */

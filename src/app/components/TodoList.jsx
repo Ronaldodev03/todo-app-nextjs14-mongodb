@@ -247,6 +247,10 @@ const TodoList = ({ todo }) => {
           Completed
         </p>
       </div>
+
+      <p className=" text-center mt-8 text-gray-500">
+        Drag and drop to reorder list
+      </p>
     </>
   );
 };

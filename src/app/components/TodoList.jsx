@@ -62,11 +62,14 @@ const TodoList = ({ todo }) => {
       newTodo.active = !newTodo.active;
     }
 
-    const res = await fetch(`/api/todos/${id}`, {
-      method: "PUT",
-      body: JSON.stringify({ newTodo }),
-      "content-type": "application/json",
-    });
+    const res = await fetch(
+      `https://todo-app-nextjs14-mongodb.vercel.app/api/todos/${id}`,
+      {
+        method: "PUT",
+        body: JSON.stringify({ newTodo }),
+        "content-type": "application/json",
+      }
+    );
 
     if (res.ok) {
       router.refresh();
@@ -104,7 +107,6 @@ const TodoList = ({ todo }) => {
           console.log("fail to reorder");
           return;
         }
-        //   console.log("reordered successfully");
       } catch (error) {
         console.error(error);
       }

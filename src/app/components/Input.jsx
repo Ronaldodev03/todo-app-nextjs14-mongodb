@@ -49,6 +49,8 @@ const Input = () => {
 
   /* submit */
   const handleSubmit = async (e) => {
+    e.preventDefault();
+
     if (formData.description.trim()) {
       const res = await fetch(
         "https://todo-app-nextjs14-mongodb.vercel.app/api/todos",

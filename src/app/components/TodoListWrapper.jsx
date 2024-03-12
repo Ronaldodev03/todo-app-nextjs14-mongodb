@@ -5,7 +5,7 @@ import TodoList from "./TodoList";
 const getTodos = async () => {
   try {
     const res = await fetch(
-      // "https://todo-app-nextjs14-mongodb.vercel.app/api/todos",
+      "https://todo-app-nextjs14-mongodb.vercel.app/api/todos",
       {
         cache: "no-store",
       }

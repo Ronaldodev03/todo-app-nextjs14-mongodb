@@ -28,7 +28,7 @@ const TodoList = ({ todo }) => {
   /* delete many */
   const deleteCompletedTodo = async () => {
     const res = await fetch(
-      `https://todo-app-nextjs14-mongodb-4z1xqftlq-ronaldodev03.vercel.app/api/todos`,
+      `https://todo-app-nextjs14-mongodb.vercel.app/api/todos`,
       {
         method: "DELETE",
       }
@@ -75,7 +75,7 @@ const TodoList = ({ todo }) => {
   /* delete one*/
   const deleteTodo = async (id) => {
     const res = await fetch(
-      `https://todo-app-nextjs14-mongodb-4z1xqftlq-ronaldodev03.vercel.app/api/todos/${id}`,
+      `https://todo-app-nextjs14-mongodb.vercel.app/api/todos/${id}`,
 
       { method: "DELETE" }
     );
@@ -91,7 +91,7 @@ const TodoList = ({ todo }) => {
     const saveOrder = async () => {
       try {
         const res = await fetch(
-          "https://todo-app-nextjs14-mongodb-4z1xqftlq-ronaldodev03.vercel.app/api/todos/reorder",
+          " https://todo-app-nextjs14-mongodb.vercel.app/api/todos/reorder",
           {
             method: "POST",
             body: JSON.stringify({ list }),

@@ -92,7 +92,7 @@ const TodoList = ({ todo }) => {
   const saveOrder = async () => {
     try {
       const res = await fetch(
-        "https://todo-app-nextjs14-mongodb.vercel.app/api/todos/reorder",
+         "https://todo-app-nextjs14-mongodb.vercel.app/api/todos/reorder",
         {
           method: "POST",
           body: JSON.stringify({ list }),
@@ -138,14 +138,14 @@ const TodoList = ({ todo }) => {
                       className={`
                 ${
                   !todo.active
-                    ? "text-gray-300 bg-gradient-to-r from-[#ffffff] to-[#ffffff] dark:text-gray-500 dark:bg-gradient-to-r dark:from-[#25273e] dark:to-[#25273e]"
+                    ? "text-gray-300 bg-gradient-to-r from-[#ffffff] to-[#ffffff] dark:text-gray-500 dark:bg-gradient-to-r dark:from-[#25273e] dark:to-[#25273e] hover:text-blue-500 dark:hover:text-blue-500"
                     : ""
                 } 
                 absolute bg-gradient-to-r from-[#57ddff] to-[#3a7bfd]  dark:text-[#25273d]  text-3xl rounded-full left-6 top-3 cursor-pointer transition-all
              `}
                     >
                       <CiCircleCheck
-                        className={`scale-125 ${todo.active && "scale-150"}`}
+                        className={`scale-125 ${todo.active && "scale-150"} `}
                       />
                     </div>
 

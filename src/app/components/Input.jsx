@@ -47,10 +47,31 @@ const Input = () => {
     }
   };
 
+
+    /* submit */
+    const handleSubmit = async (e) => {
+        const res = await fetch(
+          "https://todo-app-nextjs14-mongodb.vercel.app/api/todos",
+          {
+            method: "POST",
+            body: JSON.stringify({ formData }),
+            "content-type": "application/json",
+          }
+        );
+  
+        if (!res.ok) {
+          throw new Error("Failed to create Todo");
+        }
+        setFormData(startingTodo);
+        router.refresh();
+    };
+
   return (
     <div className=" relative mb-4 shadow-lg ">
       {/* circle */}
-      <div className="absolute text-3xl text-gray-300 dark:text-gray-500 rounded-full left-6 top-3">
+      <div 
+      onClick={handleSubmit}
+      className="absolute text-3xl text-gray-300 dark:text-gray-500 rounded-full cursor-pointer left-6 top-3">
         <CiCirclePlus className=" scale-125 " />
       </div>
 

@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         className={`${roboto.className} min-h-screen dark:bg-black transition-all  `}
       >
         {/* bg image */}
-        <div className=" bg-ligth-bg-mobile dark:bg-dark-bg-mobile sm:bg-ligth-bg-desk sm:dark:bg-dark-bg-desk dark:bg-dark bg-center bg-no-repeat bg-cover h-[12.5rem] sm:h-[18.75rem] max-w-[100rem] mx-auto"></div>
+        <div className=" bg-ligth-bg-mobile dark:bg-dark-bg-mobile sm:bg-ligth-bg-desk sm:dark:bg-dark-bg-desk dark:bg-dark bg-center bg-no-repeat bg-cover h-[12.5rem] sm:h-[18.75rem] //max-w-[100rem] mx-auto"></div>
 
         {/* content */}
         <div className="-mt-[9.375rem] sm:-mt-[12.5rem] w-[87.2%] max-w-[33.75rem] mx-auto pb-10  ">

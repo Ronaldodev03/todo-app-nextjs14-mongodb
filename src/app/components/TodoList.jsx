@@ -28,8 +28,7 @@ const TodoList = ({ todo }) => {
   /* delete many */
   const deleteCompletedTodo = async () => {
     const res = await fetch(
-      //`https://todo-app-nextjs14-mongodb.vercel.app/api/todos`,
-      `http://localhost:3000/api/todos`,
+      `https://todo-app-nextjs14-mongodb.vercel.app/api/todos`,
 
       {
         method: "DELETE",
@@ -77,8 +76,7 @@ const TodoList = ({ todo }) => {
   /* delete one*/
   const deleteTodo = async (id) => {
     const res = await fetch(
-      //`https://todo-app-nextjs14-mongodb.vercel.app/api/todos/${id}`,
-      `http://localhost:3000/api/todos${id}`,
+      `https://todo-app-nextjs14-mongodb.vercel.app/api/todos/${id}`,
 
       { method: "DELETE" }
     );
@@ -88,7 +86,7 @@ const TodoList = ({ todo }) => {
   };
 
   /* send reorder list to db */
-  /*  useEffect(() => {
+  useEffect(() => {
     if (!list.length) return;
 
     const saveOrder = async () => {
@@ -113,7 +111,7 @@ const TodoList = ({ todo }) => {
     };
 
     saveOrder();
-  }, [list]); */
+  }, [list]);
 
   return (
     <>

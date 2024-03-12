@@ -93,7 +93,6 @@ const TodoList = ({ todo }) => {
     try {
       const res = await fetch(
         "https://todo-app-nextjs14-mongodb.vercel.app/api/todos/reorder",
-
         {
           method: "POST",
           body: JSON.stringify({ list }),

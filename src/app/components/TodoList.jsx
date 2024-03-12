@@ -89,31 +89,26 @@ const TodoList = ({ todo }) => {
   };
 
   /* send reorder list to db */
-  useEffect(() => {
-    if (!list.length) return;
+  const saveOrder = async () => {
+    try {
+      const res = await fetch(
+        "https://todo-app-nextjs14-mongodb.vercel.app/api/todos/reorder",
 
-    const saveOrder = async () => {
-      try {
-        const res = await fetch(
-          "https://todo-app-nextjs14-mongodb.vercel.app/api/todos/reorder",
-          {
-            method: "POST",
-            body: JSON.stringify({ list }),
-            "Content-Type": "application/json",
-          }
-        );
-
-        if (!res.ok) {
-          console.log("fail to reorder");
-          return;
+        {
+          method: "POST",
+          body: JSON.stringify({ list }),
+          "Content-Type": "application/json",
         }
-      } catch (error) {
-        console.error(error);
-      }
-    };
+      );
 
-    saveOrder();
-  }, [list]);
+      if (!res.ok) {
+        console.log("fail to reorder");
+        return;
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <>
@@ -136,7 +131,7 @@ const TodoList = ({ todo }) => {
           >
             {filteredTodos().map((todo, index) => {
               return (
-                <Reorder.Item key={todo._id} value={todo}>
+                <Reorder.Item key={todo._id} value={todo} onDragEnd={saveOrder}>
                   <div className=" group relative border-b dark:border-b-[#393a4b] ">
                     {/* circle */}
                     <div
@@ -179,6 +174,7 @@ const TodoList = ({ todo }) => {
             })}
           </Reorder.Group>
         )}
+
         {/* constrols */}
         <div
           className={`dark:bg-[#25273d] px-[1.5rem] w-full py-4 bg-white rounded-b-md flex justify-between text-gray-400`}

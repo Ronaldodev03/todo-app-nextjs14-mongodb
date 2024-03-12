@@ -92,7 +92,7 @@ const TodoList = ({ todo }) => {
     const saveOrder = async () => {
       try {
         const res = await fetch(
-          " https://todo-app-nextjs14-mongodb.vercel.app/api/todos/reorder",
+          "https://todo-app-nextjs14-mongodb.vercel.app/api/todos/reorder",
           {
             method: "POST",
             body: JSON.stringify({ list }),
@@ -104,7 +104,7 @@ const TodoList = ({ todo }) => {
           console.log("fail to reorder");
           return;
         }
-        console.log("reordered successfully");
+        //   console.log("reordered successfully");
       } catch (error) {
         console.error(error);
       }

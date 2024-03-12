@@ -74,7 +74,7 @@ const Input = () => {
       {/* circle */}
       <div
         onClick={handleSubmit}
-        className="absolute text-3xl text-gray-300 dark:text-gray-500 rounded-full cursor-pointer left-6 top-3"
+        className="absolute text-3xl text-gray-300 dark:text-gray-500 rounded-full cursor-pointer left-6 top-3 hover:text-blue-500 dark:hover:text-blue-500"
       >
         <CiCirclePlus className=" scale-125 " />
       </div>

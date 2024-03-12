@@ -15,6 +15,16 @@ const ThemeButton = () => {
     }
   }, [theme]);
 
+  /* Theme according to system settings */
+  useEffect(() => {
+    /* check preference of the system */
+    if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };

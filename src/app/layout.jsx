@@ -9,7 +9,8 @@ const roboto = Lato({
 
 export const metadata = {
   title: "Todo App",
-  description: "Frontend Mentor Project",
+  description:
+    "Welcome to TodoApp, a modern and dynamic solution designed to help you manage your tasks efficiently and stylishly. Built with the latest technology stack including Next.js 14, Tailwind CSS, MongoDB, and enhanced with features like dark mode and drag-and-drop functionality, TodoApp stands out as your ultimate tool for personal organization and productivity.",
 };
 
 export default function RootLayout({ children }) {
